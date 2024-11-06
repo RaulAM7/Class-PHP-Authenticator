@@ -9,9 +9,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccessDeniedController extends AbstractController
 {
     #[Route('/access_denied', name: 'app_access_denied')]
-    public function index(): Response
+    public function index()
     {
-        return $this->render('access_denied/index.html.twig', [
+        $this->render('access_denied/index.html.twig', [
             'controller_name' => 'AccessDeniedController',
         ]);
     }
